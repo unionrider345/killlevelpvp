@@ -1,0 +1,30 @@
+name: KillLevelPvP
+version: 1.0.0
+main: com.killlevelpvp.KillLevelPvP
+api-version: '1.21'
+description: A PvP kill-based leveling system with 8 levels and permanent abilities
+author: Claude
+website: https://github.com/example/KillLevelPvP
+
+commands:
+  level:
+    description: Opens the level GUI showing your kills and current level
+    usage: /<command>
+    aliases: [lvl]
+    permission: killlevelpvp.use
+    permission-message: You don't have permission to use this command.
+  
+  killlevelpvp:
+    description: Admin commands for KillLevelPvP
+    usage: /<command> reload
+    permission: killlevelpvp.admin
+    permission-message: You don't have permission to use this command.
+
+permissions:
+  killlevelpvp.use:
+    description: Allows using the /level command
+    default: true
+  
+  killlevelpvp.admin:
+    description: Allows using admin commands like /killlevelpvp reload
+    default: op

@@ -1,0 +1,60 @@
+# ╔═══════════════════════════════════════════════════════════════════╗
+# ║                     KillLevelPvP Messages                          ║
+# ║                                                                     ║
+# ║  Customize all plugin messages here                                ║
+# ║  Color codes: &0-9, &a-f, &l, &o, &n, &m, &k, &r                  ║
+# ║  Hex colors: &#RRGGBB (e.g., &#FF5500)                            ║
+# ╚═══════════════════════════════════════════════════════════════════╝
+
+# ═══════════════════════════════════════════════════════════════════
+# LEVEL UP NOTIFICATIONS
+# ═══════════════════════════════════════════════════════════════════
+# Shown when a player gains a level
+#
+# Placeholders:
+#   {level} - The new level achieved
+#
+level-up:
+  title: "&a&lLEVEL UP!"
+  subtitle: "&eLevel {level} Unlocked"
+
+# ═══════════════════════════════════════════════════════════════════
+# LEVEL DOWN NOTIFICATIONS
+# ═══════════════════════════════════════════════════════════════════
+# Shown when a player loses a level (subtitle only, no title)
+#
+# Placeholders:
+#   {level} - The new level
+#
+level-down:
+  subtitle: "&cLevel {level}"
+
+# ═══════════════════════════════════════════════════════════════════
+# MAX LEVEL BROADCAST
+# ═══════════════════════════════════════════════════════════════════
+# Broadcast to all players when someone reaches Level 8
+#
+# Placeholders:
+#   {player} - The player's name
+#
+max-level:
+  broadcast: "&6&l{player} &ehas reached &6&lMAX LEVEL&e!"
+
+# ═══════════════════════════════════════════════════════════════════
+# GUI MENU MESSAGES
+# ═══════════════════════════════════════════════════════════════════
+# Text displayed in the /level GUI menu
+#
+gui:
+  # Inventory title
+  title: "Your Level"
+  
+  # Item names
+  level-name: "&6&lYour Level"
+  kills-name: "&c&lYour Kills"
+  progress-name: "&b&lProgress"
+  close-name: "&c&lClose"
+  
+  # Progress display
+  max-level: "&a&lMAX LEVEL"
+  next-level: "&7Next: Level {level} in {kills} kill(s)"

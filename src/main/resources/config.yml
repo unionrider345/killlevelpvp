@@ -1,0 +1,96 @@
+# ╔═══════════════════════════════════════════════════════════════════╗
+# ║                       KillLevelPvP Configuration                   ║
+# ║                                                                     ║
+# ║  A PvP kill-based leveling system with 8 levels                    ║
+# ║  Each level grants permanent abilities based on player kills       ║
+# ╚═══════════════════════════════════════════════════════════════════╝
+
+# ═══════════════════════════════════════════════════════════════════
+# LEVEL THRESHOLDS
+# ═══════════════════════════════════════════════════════════════════
+# Define the number of kills required to reach each level
+# 
+# DEFAULT ABILITIES:
+#   Level 1 (0 kills)  -> None
+#   Level 2 (1 kill)   -> Speed I (permanent)
+#   Level 3 (3 kills)  -> +1 max heart
+#   Level 4 (5 kills)  -> Strength I (permanent)
+#   Level 5 (8 kills)  -> Double Jump (5s cooldown)
+#   Level 6 (12 kills) -> +1 max heart (total +2)
+#   Level 7 (16 kills) -> Speed II (replaces Speed I)
+#   Level 8 (20 kills) -> +1 max heart (total +3)
+#
+levels:
+  1:
+    kills: 0
+  2:
+    kills: 1
+  3:
+    kills: 3
+  4:
+    kills: 5
+  5:
+    kills: 8
+  6:
+    kills: 12
+  7:
+    kills: 16
+  8:
+    kills: 20
+
+# ═══════════════════════════════════════════════════════════════════
+# SOUND SETTINGS
+# ═══════════════════════════════════════════════════════════════════
+# Configure sounds played on level up
+# 
+# Sound names: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+# Common options:
+#   - ENTITY_PLAYER_LEVELUP (default)
+#   - UI_TOAST_CHALLENGE_COMPLETE
+#   - ENTITY_FIREWORK_ROCKET_BLAST
+#   - BLOCK_NOTE_BLOCK_PLING
+#
+sounds:
+  level-up:
+    sound: ENTITY_PLAYER_LEVELUP
+    volume: 1.0
+    pitch: 1.0
+
+# ═══════════════════════════════════════════════════════════════════
+# DOUBLE JUMP SETTINGS
+# ═══════════════════════════════════════════════════════════════════
+# Configure the double jump ability (Level 5+)
+#
+# cooldown: Time in seconds between double jumps
+#
+double-jump:
+  cooldown: 5
+
+# ═══════════════════════════════════════════════════════════════════
+# TAB LIST SETTINGS
+# ═══════════════════════════════════════════════════════════════════
+# Configure how player names appear in the tab list
+#
+# Placeholders:
+#   {level} - Player's current level (1-8)
+#   {name}  - Player's name
+#
+# Color codes:
+#   &0-9, &a-f for colors
+#   &l (bold), &o (italic), &n (underline), &m (strikethrough), &k (obfuscated)
+#   &r to reset
+#   &#RRGGBB for hex colors (e.g., &#FF5500)
+#
+tab-list:
+  format: "&7[&eLv {level}&7] &f{name}"
+
+# ═══════════════════════════════════════════════════════════════════
+# ANTI-FARM SETTINGS
+# ═══════════════════════════════════════════════════════════════════
+# Prevent kill farming by limiting repeated kills
+#
+# cooldown: Time in seconds before the same killer can get credit
+#           for killing the same victim again
+#
+anti-farm:
+  cooldown: 60
