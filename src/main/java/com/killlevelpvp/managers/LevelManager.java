@@ -121,7 +121,7 @@ public class LevelManager {
      * Apply extra health to a player
      */
     private void applyExtraHealth(Player player, double extraHealth) {
-        AttributeInstance attribute = player.getAttribute(Attribute.MAX_HEALTH);
+        AttributeInstance attribute = player.getAttribute(Attribute.GENERIC_MAX_HEALTH);
         if (attribute == null) return;
         
         // Remove any existing modifier first
@@ -146,7 +146,7 @@ public class LevelManager {
      * Remove extra health from a player
      */
     private void removeExtraHealth(Player player) {
-        AttributeInstance attribute = player.getAttribute(Attribute.MAX_HEALTH);
+        AttributeInstance attribute = player.getAttribute(Attribute.GENERIC_MAX_HEALTH);
         if (attribute == null) return;
         
         // Remove our modifier
